@@ -162,7 +162,6 @@ function reverse(word) {
     let word_2 = "";
     for (let i = word.length - 1; i >= 0; i--) {
         word_2 += word[i];
-
     }
     return (word_2);
 }
@@ -187,20 +186,160 @@ else {
     console.log("Слово является палиндромом!");
 }
 
+// 6.1
+
+function priceMessage() {
+    console.log(`Данный товар стоит ${price} рублей`);
+}
+priceMessage();
+
+// 6.2
+
+function mult(a, b) {
+    return a * b;
+}
+console.log(mult(num_1, num_2));
+
+// 6.3
+
+function square() {
+    return num * num;
+}
+square();
+
+// 6.4-------------
+
+num = 2
+
+for (let i = 0; i >=3; i++) {
+    num * num;
+    console.log(num);
+}
+
+// 6.5
+
+
+let data = "123px";
+
+function getNumber(data) {
+  if (typeof data === 'number' || isNaN(data) === false || Boolean (data) === true) {    
+    return (Number(data));
+  }
+  else {
+    return(0);
+  }
+}
+console.log(getNumber(data));
 
 
 
-/*
-    Дом
-    находится
-    Количество домов - 0 - 1000
 
-    В городе находится n домов
+// 6.6
 
-    находится 1 дом
-    находятся 202 дома
-    находятся 314 домов
+function getPercent(value, total) {
+    return value / total * 100;
+}
+getPercent(value, total)
 
-    Для понимания логики - посчитайте до 30
-    Подсказка: Использовать остаток от деления (%)
-*/
+
+// 9.1
+
+list.unshift ("Яблоко");
+list.pop();
+list.push ("Клубника");
+
+console.log(list);
+
+
+// 9.2
+
+let result = [];
+for(let i = 0; i < list.length; i++) {
+  if(list[i].length > result.length) {
+    result = list[i];
+  }
+}
+console.log(result);
+
+
+// 9.3
+
+
+let result = 0;
+for(let i = 0; i < list.length; i++) {
+      result += Number(list[i]);
+  }
+console.log(result);
+
+
+// 9.4
+
+
+let list_3 = [];
+
+for(let i = 0; i < list_2.length; i++) {
+  list_1.push(list_2[i]);
+}
+for(let i = 0; i < list_1.length; i++) {
+  list_3.push(list_1[i]*list_1[i])
+}
+
+console.log(list_3);
+
+
+// 9.5
+
+let sum = 0;
+
+for(let i = 0; i < list.length; i++) {
+  if(list[i] > 0) {
+    sum += list[i];
+  }
+}
+console.log(sum);
+
+
+// 9.6
+
+
+let sum = 0;
+
+for (let i = 2; i < list.length; i++) {
+    sum += list[i];
+    for (let j = 0; j < list.length; j++) {
+        if (list[i] !== list[j] && list[j] % list[i] === 0) {
+          list[j] = null;
+        }
+    }
+
+}
+console.log(sum);
+
+
+// 9.7
+
+
+let min = list[0];
+let max = list[0];
+
+for(let i = 0; i < list.length; i++) {
+  if(list[i] > max) {
+    max = list[i]
+  }
+  else if(list[i] < min) {
+    min = list[i]
+  }
+}
+let result = min * max;
+console.log(result);
+
+
+// 9.8
+
+
+let result = [];
+
+for(let i = list.length -1; i >= 0; i--) {
+  result.push(list[i]);
+}
+console.log(result);
