@@ -219,15 +219,28 @@ for (let i = 0; i >=3; i++) {
 // 6.5
 
 
-let data = "123px";
-
 function getNumber(data) {
-  if (typeof data === 'number' || isNaN(data) === false || Boolean (data) === true) {    
-    return (Number(data));
-  }
-  else {
-    return(0);
-  }
+
+    if (typeof data === 'number') {
+        return data;
+    }
+
+    else if (typeof data !== 'number') {
+        let a = 0;
+        let result = 0; 
+
+        for (let i = 0; i < data.length; i++) {
+            a = data[i];
+
+            if (isNaN(a) === false) {
+                result = result + a;
+            }        
+        }
+        return result * 1;
+    }
+    else {
+        return 0;
+    }
 }
 console.log(getNumber(data));
 
@@ -343,3 +356,22 @@ for(let i = list.length -1; i >= 0; i--) {
   result.push(list[i]);
 }
 console.log(result);
+
+
+// 9.9
+
+let result = [];
+let value = "";
+
+for(let i = 0; i < sentence.length; i++) {
+  if(sentence[i] ===  " ") {
+    result.push(value);
+    value = "";
+  }
+  else {
+    value += sentence[i];
+  }  
+}
+result.push(value);
+console.log(result);
+
