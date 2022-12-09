@@ -279,6 +279,7 @@ console.log(result);
 
 
 let result = 0;
+
 for(let i = 0; i < list.length; i++) {
       result += Number(list[i]);
   }
@@ -375,3 +376,136 @@ for(let i = 0; i < sentence.length; i++) {
 result.push(value);
 console.log(result);
 
+
+// 9.10
+
+
+let cnt = 0;
+
+function count(list) {
+  for(let i = 0; i < list.length; i++) {
+    if(list[i] % 2 === 0) {
+      cnt += 1;
+    }
+  }
+  return cnt;
+}
+console.log(count(list));
+
+
+// 9.11
+
+let result = 0;
+
+function average(list) {
+  for(let i = 0; i < list.length; i++) {
+    result += list[i]
+  }
+  return Math.round(result / list.length);
+}
+console.log(average(list));
+
+
+// 9.12
+
+let result = 0;
+
+for (let i = 0; i < list.length; i++) {
+    if (typeof list[i] === 'number') {
+        result += list[i];
+
+
+    }
+    else {
+        break;
+    }
+}
+
+console.log(result);
+
+
+// 9.13
+
+
+let list = [];
+
+for(let i = 10; i < 21; i++) {
+  list.push(i)
+}
+console.log(list);
+
+
+
+// 9.14
+
+
+let numbers_list = [];
+
+for (let i = 0; i < list.length; i++) {
+    if (typeof list[i] === 'number') {
+        numbers_list.push(list[i]);
+
+
+    }
+    else if (list[i] === false) {
+        break;
+    }
+}
+
+console.log(numbers_list);
+
+
+
+// 9.15
+
+
+let count = 0;
+
+for(let i = 0; i < list.length; i++) {
+  if(list[i].toLowerCase() !== 'default') {
+    count++;
+  }
+}
+console.log(count);
+
+
+// 9.16
+
+
+let count = "";
+
+for(let el of list) {
+  count +=el[0]
+}
+console.log(count);
+
+
+// 9.17
+
+
+let result = {};
+
+for(let k in obj) {
+  if (result[obj[k]]) {
+    result[obj[k]]++;
+  }
+  else {
+    result[obj[k]] = 1;
+  }
+}
+console.log(result);
+
+
+// 9.18
+
+
+let max = 0;
+let result = "";
+
+for(let i = 0; i < list.length; i++) {
+  if(max < list[i].price) {
+    max = list[i].price;
+    result = list[i].product;
+  }
+}
+console.log(result);
